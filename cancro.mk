@@ -87,6 +87,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.rild.nitz_short_ons_2="" \
     persist.rild.nitz_short_ons_3=""
 
+# f2fs
+PRODUCT_PACKAGES += \
+    fsck.f2fs \
+    mkfs.f2fs \
+    fibmap.f2fs	
+	
 # Power
 PRODUCT_PACKAGES += \
     power.msm8974

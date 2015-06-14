@@ -120,6 +120,7 @@ WIFI_DRIVER_FW_PATH_AP           := "ap"
 
 # Filesystem
 TARGET_USERIMAGES_USE_EXT4         := true
+TARGET_USERIMAGES_USE_F2FS         := true
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_PERSISTIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_BOOTIMAGE_PARTITION_SIZE := 16384000
@@ -138,6 +139,8 @@ TARGET_RECOVERY_FSTAB := $(CANCRO_PATH)/rootdir/root/fstab.qcom
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/class/leds/lcd-backlight/brightness\"
+BOARD_HAS_NO_SELECT_BUTTON := true
+
 
 # TWRP
 TW_THEME := portrait_hdpi
@@ -179,7 +182,6 @@ BOARD_USES_QC_TIME_SERVICES := true
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
-BOARD_HAS_NO_SELECT_BUTTON := true
 
 # Enable dex-preoptimization to speed up first boot sequence
 ifeq ($(HOST_OS),linux)

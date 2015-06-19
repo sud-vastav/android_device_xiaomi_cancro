@@ -160,7 +160,7 @@ TARGET_GPS_HAL_PATH := $(CANCRO_PATH)/gps
 TARGET_PROVIDES_GPS_LOC_API := true
 
 # Use HW crypto for ODE
-TARGET_HW_DISK_ENCRYPTION := false
+TARGET_HW_DISK_ENCRYPTION := true
 
 # Added to indicate that protobuf-c is supported in this build
 PROTOBUF_SUPPORTED := true
@@ -181,16 +181,6 @@ BOARD_USES_QC_TIME_SERVICES := true
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
 BOARD_HAS_NO_SELECT_BUTTON := true
-
-# Enable dex-preoptimization to speed up first boot sequence
-ifeq ($(HOST_OS),linux)
-  ifeq ($(TARGET_BUILD_VARIANT),user)
-    ifeq ($(WITH_DEXPREOPT),)
-      WITH_DEXPREOPT := true
-    endif
-  endif
-endif
-DONT_DEXPREOPT_PREBUILTS := true
 
 # SELinux policies
 # qcom sepolicy

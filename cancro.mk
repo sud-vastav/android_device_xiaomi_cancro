@@ -276,7 +276,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libxml2
-    SlimFileManager
+    SlimFileManager \
 
 # Graphics
 PRODUCT_PACKAGES += \

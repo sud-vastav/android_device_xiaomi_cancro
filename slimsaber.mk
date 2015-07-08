@@ -25,7 +25,7 @@ $(call inherit-product, device/xiaomi/cancro/cancro.mk)
 # Enhanced NFC
 $(call inherit-product, vendor/slimsaber/config/nfc_enhanced.mk)
 
-# Inherit some common CM stuff.
+# Inherit some common slimsaber stuff.
 $(call inherit-product, vendor/slimsaber/config/common_full_phone.mk)
 
 PRODUCT_NAME := slimsaber_cancro
